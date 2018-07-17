@@ -230,11 +230,14 @@ class CsvSeeder extends Seeder
                 switch ($dbCol)
                 {
                     case 'options':
-                        $row[$csvCol] = explode('\r',$row[$csvCol]);
+                    case 'options_data':
+                        if ($row[2] != 'ass')
+                        {
+                            // make sure to use double quotes to \n is intrepreted correctly
+                            $row[$csvCol] = json_encode(explode("\n",$row[$csvCol]));
+                        }
                         break;
                 }
-                
-
                 // END DTD
 
                 $row_values[$dbCol] = $this->should_trim ? trim($row[$csvCol]) : $row[$csvCol];
