@@ -231,6 +231,7 @@ class CsvSeeder extends Seeder
                 {
                     case 'options':
                     case 'options_data':
+                    case 'output':
                         if ($row[2] != 'ass')
                         {
                             // make sure to use double quotes to \n is intrepreted correctly
