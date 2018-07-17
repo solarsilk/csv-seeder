@@ -1,4 +1,4 @@
-## CSV Seeder - customer for DTD
+## CSV Seeder - forked for DTD
 
 
 ### Seed your database with CSV files

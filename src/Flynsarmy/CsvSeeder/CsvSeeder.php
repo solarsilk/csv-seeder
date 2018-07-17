@@ -225,6 +225,18 @@ class CsvSeeder extends Seeder
                 $row_values[$dbCol] = NULL;
             }
             else {
+
+                // DTD
+                switch ($dbCol)
+                {
+                    case 'options':
+                        $row[$csvCol] = explode('\r',$row[$csvCol]);
+                        break;
+                }
+                
+
+                // END DTD
+
                 $row_values[$dbCol] = $this->should_trim ? trim($row[$csvCol]) : $row[$csvCol];
             }
         }
