@@ -234,6 +234,7 @@ class CsvSeeder extends Seeder
                     case 'output':
                         if ($row[2] != 'ass')
                         {
+                            // convert line breaks in these columns into arrays for db storage
                             // make sure to use double quotes to \n is intrepreted correctly
                             $row[$csvCol] = json_encode(explode("\n",$row[$csvCol]));
                         }
