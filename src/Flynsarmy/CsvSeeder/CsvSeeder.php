@@ -232,9 +232,9 @@ class CsvSeeder extends Seeder
                     case 'options':
                     case 'options_data':
                     case 'output':
-                        if ($row[3] == 'ass')
+                        // 2 or 3 during db code transition. then change to just 3 after transition
+                        if ($row[2] == 'ass' || $row[3] == 'ass')
                         {
-                            //$row[$csvCol] = array($row[$csvCol]);
                             $row[$csvCol] = $row[$csvCol];
                         }
                         else
