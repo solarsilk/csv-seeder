@@ -232,9 +232,9 @@ class CsvSeeder extends Seeder
                     case 'options':
                     case 'options_data':
                     case 'output':
-                        if ($row[2] == 'ass')
+                        if ($row[3] == 'ass')
                         {
-                            $row[$csvCol] = '1 - ' . eval($row[$csvCol]);
+                            $row[$csvCol] = eval($row[$csvCol]);
                         }
                         else
                         {
