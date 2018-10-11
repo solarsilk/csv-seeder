@@ -234,7 +234,7 @@ class CsvSeeder extends Seeder
                     case 'output':
                         if ($row[3] == 'ass')
                         {
-                            $row[$csvCol] = eval($row[$csvCol]);
+                            $row[$csvCol] = array($row[$csvCol]);
                         }
                         else
                         {
